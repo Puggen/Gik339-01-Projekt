@@ -69,7 +69,7 @@ server.post('/cars', (req, res) => {
       console.log(err);
       res.status(500).send(err);
     } else {
-      res.send('Användaren sparades');
+      res.send('Bilen sparades');
     }
   });
 });
@@ -98,7 +98,7 @@ server.put('/cars', (req, res) => {
       console.log(err);
       res.status(500).send(err);
     } else {
-      res.send('Användaren uppdaterades');
+      res.send('Bilen uppdaterades');
     }
   });
   //UPDATE cars SET model="Mikaela",manufac="Hedberg" WHERE id=1
@@ -113,7 +113,7 @@ server.delete('/cars/:id', (req, res) => {
       console.log(err);
       res.status(500).send(err);
     } else {
-      res.send('Användaren borttagen');
+      res.send('Bilen borttagen');
     }
   });
 });
