@@ -8,16 +8,16 @@ CREATE TABLE IF NOT EXISTS  cars(
 );
   
 
-INSERT INTO cars(id,model,manufac,regnr,color) VALUES (1,'Zena','Zulauf','Katlynn_Bregnrkke','gregnren');
-INSERT INTO cars(id,model,manufac,regnr,color) VALUES (2,'Muhammad','Torphy','Martina39','gray');
-INSERT INTO cars(id,model,manufac,regnr,color) VALUES (3,'Carlee','Tromp','Carmen37','purple');
-INSERT INTO cars(id,model,manufac,regnr,color) VALUES (4,'Taylor','Shanahan','Doyle_Legros81','regnrd');
-INSERT INTO cars(id,model,manufac,regnr,color) VALUES (5,'Estell','regnrichel','Santiago.Dibbert','regnrd');
-INSERT INTO cars(id,model,manufac,regnr,color) VALUES (6,'regnrece','Stehr','Destany75','regnrd');
-INSERT INTO cars(id,model,manufac,regnr,color) VALUES (7,'Kiarra','Beier','Edison87','yellow');
-INSERT INTO cars(id,model,manufac,regnr,color) VALUES (8,'Alberto','Gibson','Marianna_Collins','gregnren');
-INSERT INTO cars(id,model,manufac,regnr,color) VALUES (9,'Johanna','Bashirian','Mervin.Grant','yellow');
-INSERT INTO cars(id,model,manufac,regnr,color) VALUES (10,'Thalia','Kozey','Ashley22','yellow');
+INSERT INTO cars(id,model,manufac,regnr,color) VALUES (1,'740','Volvo','HGT 435','red');
+INSERT INTO cars(id,model,manufac,regnr,color) VALUES (2,'R8','Audi','MIT 782','gray');
+INSERT INTO cars(id,model,manufac,regnr,color) VALUES (3,'520i','BMW','LKI 099','purple');
+INSERT INTO cars(id,model,manufac,regnr,color) VALUES (4,'9000','SAAB','LKO 081','gray');
+INSERT INTO cars(id,model,manufac,regnr,color) VALUES (5,'Polo','Volkswagen','JBV 412','gray');
+INSERT INTO cars(id,model,manufac,regnr,color) VALUES (6,'impreza','Subaru','DTY 621','yello');
+INSERT INTO cars(id,model,manufac,regnr,color) VALUES (7,'Uno','Fiat','FPM 611','yellow');
+INSERT INTO cars(id,model,manufac,regnr,color) VALUES (8,'320i','BMW','MBC 831','gregnren');
+INSERT INTO cars(id,model,manufac,regnr,color) VALUES (9,'900','SAAB','OPI 977','yellow');
+INSERT INTO cars(id,model,manufac,regnr,color) VALUES (10,'Golf','Volkswagen','MLB 373','yellow');
 
 
 select * from cars;
