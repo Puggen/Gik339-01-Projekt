@@ -17,7 +17,8 @@ function fetchData() {
                         <section class="border p-3 rounded-4" style="background-color: rgba(255, 255, 255, 0.8);">
                             <h5 class="card-title text-center">${car.manufac}</h5>
                             <p class="card-text">Regnr: ${car.regnr}</p>
-                            <p class="card-text">Modell: ${car.model}</p>                 
+                            <p class="card-text">Modell: ${car.model}</p>
+                            <p class="card-text">Drivmedel: ${car.fuel}</p>                  
                         </section>
                     </div>
                     <div class="text-center">
@@ -29,9 +30,9 @@ function fetchData() {
                 });
                 html += `</div>`;
 
-                const container = document.getElementById("container");
-                container.innerHTML += ``;
-                container.insertAdjacentHTML("beforeend", html);
+                const cardContainer = document.getElementById("cardContainer");
+                cardContainer.innerHTML += '';
+                cardContainer.insertAdjacentHTML("beforeend", html);
             }
         });
 }
@@ -47,6 +48,7 @@ function setCurrentcar(id) {
             carForm.manufac.value = car.manufac;
             carForm.color.value = car.color;
             carForm.regnr.value = car.regnr;
+            carForm.fuel.value = car.fuel;
 
             localStorage.setItem("currentId", car.id);
         });
@@ -66,11 +68,13 @@ function handleSubmit(e) {
         manufac: "",
         regnr: "",
         color: "",
+        fuel: "",
     };
     servercarObject.model = carForm.model.value;
     servercarObject.manufac = carForm.manufac.value;
     servercarObject.regnr = carForm.regnr.value;
     servercarObject.color = carForm.color.value;
+    servercarObject.color = carForm.fuel.value;
 
     const id = localStorage.getItem("currentId");
     if (id) {
