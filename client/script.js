@@ -27,9 +27,9 @@ function fetchData() {
                 });
                 html += `</ul>`;
 
-                const listContainer = document.getElementById("listContainer");
-                listContainer.innerHTML = "";
-                listContainer.insertAdjacentHTML("beforeend", html);
+                const ardContainer = document.getElementById("ardContainer");
+                ardContainer.innerHTML = "";
+                ardContainer.insertAdjacentHTML("beforeend", html);
             }
         });
 }

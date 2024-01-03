@@ -8,6 +8,8 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="shortcut icon"
         href="#" />
   <title>BILFÖRSÄLJARNA</title>
@@ -15,7 +17,7 @@
 
 <body class="min-h-[100vh] bg-gradient-to-b from-slate-800 to-slate-700 text-white">
   <header class="mt-10 text-center">
-    <h1 class="text-3xl">BILFÖRSÄLJARNA AB</h1>
+    <h1 class="text-3xl">BIL & LIVS AB</h1>
   </header>
   <main class="mt-10">
     <div class="w-[55rem] mx-auto mt-8 bg-white/25 p-3 rounded-lg">
@@ -56,7 +58,114 @@
         </div>
       </form>
     </div>
-    <div id="listContainer"></div>
+    <section class="container" id="cardContainer">
+      <div class="row gap-4">
+        <div class="card shadow-sm p-3 mb-5 rounded-4 border"
+            style="width: 18rem; background-color: rgba(255, 0, 0, 0.6);">
+            <img src="./client/img/OIG.png" class="card-img-top" alt="Logo of a car">
+            <div class="card-body">
+                <section class="border p-3 rounded-4" style="background-color: rgba(255, 255, 255, 0.8);">
+                    <h5 class="card-title text-center">Volkswagen</h5>
+                    <p class="card-text">Regnr: ABC 123</p>
+                    <p class="card-text">Model: Sedan</p>
+                    <p class="card-text">År: 2017</p>
+                    <p class="card-text">Drivmedel: Bensin</p>
+                    <p class="card-text">Färg: Röd</p>
+                </section>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary"
+                    style="color: black; background-color: rgba(255, 255, 255, 0.8); border:none;">Ändra</button>
+                <button class="btn btn-primary"
+                    style="color: black; background-color: rgba(255, 255, 255, 0.8); border:none;">Ta bort</button>
+            </div>
+        </div>
+
+        <div class="card shadow-sm p-3 mb-5 rounded-4 border"
+            style="width: 18rem; background-color: rgba(0, 0, 0, 0.6);">
+            <img src="./img/OIG.png" class="card-img-top" alt="Logo of a car">
+            <div class="card-body">
+                <section class="border p-3 rounded-4" style="background-color: rgba(255, 255, 255, 0.8);">
+                    <h5 class="card-title text-center">Volvo V90</h5>
+                    <p class="card-text">Regnr: ABC 123</p>
+                    <p class="card-text">Model: Kombi</p>
+                    <p class="card-text">År: 2019</p>
+                    <p class="card-text">Drivmedel: Diesel</p>
+                    <p class="card-text">Färg: Svart</p>
+                </section>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary"
+                    style="color: black; background-color: rgba(255, 255, 255, 0.8); border:none;">Ändra</button>
+                <button class="btn btn-primary"
+                    style="color: black; background-color: rgba(255, 255, 255, 0.8); border:none;">Ta bort</button>
+            </div>
+        </div>
+
+        <div class="card shadow-sm p-3 mb-5 rounded-4 border"
+            style="width: 18rem; background-color: rgba(86, 86, 86, 0.6);">
+            <img src="./img/OIG.png" class="card-img-top" alt="Logo of a car">
+            <div class="card-body">
+                <section class="border p-3 rounded-4" style="background-color: rgba(255, 255, 255, 0.8);">
+                    <h5 class="card-title text-center">KIA RIO</h5>
+                    <p class="card-text">Regnr: ABC 123</p>
+                    <p class="card-text">Model: Racerbil</p>
+                    <p class="card-text">År: 2024</p>
+                    <p class="card-text">Drivmedel: Jetbränsle</p>
+                    <p class="card-text">Färg: Grå</p>
+                </section>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary"
+                    style="color: black; background-color: rgba(255, 255, 255, 0.8); border:none;">Ändra</button>
+                <button class="btn btn-primary"
+                    style="color: black; background-color: rgba(255, 255, 255, 0.8); border:none;">Ta bort</button>
+            </div>
+        </div>
+
+        <div class="card shadow-sm p-3 mb-5 rounded-4 border"
+            style="width: 18rem; background-color: rgba(0, 255, 30, 0.6);">
+            <img src="./img/OIG.png" class="card-img-top" alt="Logo of a car">
+            <div class="card-body">
+                <section class="border p-3 rounded-4" style="background-color: rgba(255, 255, 255, 0.8);">
+                    <h5 class="card-title text-center">Ford Focus</h5>
+                    <p class="card-text">Regnr: ABC 123</p>
+                    <p class="card-text">Model: Kombi</p>
+                    <p class="card-text">År: 2015</p>
+                    <p class="card-text">Drivmedel: Bensin</p>
+                    <p class="card-text">Färg: Grön</p>
+                </section>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary"
+                    style="color: black; background-color: rgba(255, 255, 255, 0.8); border:none;">Ändra</button>
+                <button class="btn btn-primary"
+                    style="color: black; background-color: rgba(255, 255, 255, 0.8); border:none;">Ta bort</button>
+            </div>
+        </div>
+
+        <div class="card shadow-sm p-3 mb-5 rounded-4 border"
+            style="width: 18rem; background-color: rgba(255, 162, 0, 0.6);">
+            <img src="./img/OIG.png" class="card-img-top" alt="Logo of a car">
+            <div class="card-body">
+                <section class="border p-3 rounded-4" style="background-color: rgba(255, 255, 255, 0.8);">
+                    <h5 class="card-title text-center">Tesla Model S</h5>
+                    <p class="card-text">Regnr: ABC 123</p>
+                    <p class="card-text">Model: Sedan</p>
+                    <p class="card-text">År: 2020</p>
+                    <p class="card-text">Drivmedel: El</p>
+                    <p class="card-text">Färg: Orange</p>
+                </section>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary"
+                    style="color: black; background-color: rgba(255, 255, 255, 0.8); border:none;">Ändra</button>
+                <button class="btn btn-primary"
+                    style="color: black; background-color: rgba(255, 255, 255, 0.8); border:none;">Ta bort</button>
+            </div>
+        </div>
+    </div>
+    </section>
   </main>
 
   <script src="script.js"></script>
