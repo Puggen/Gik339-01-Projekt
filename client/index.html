@@ -54,16 +54,39 @@
             <option value="black">Svart</option>
           </select>
         </div>
-        <button type="submit" class="btn btn-primary" name="submitCarForm">Lägg till</button>
+        <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#submitModal" name="submitCarForm">Lägg till</button>
+        <div class="modal fade" id="submitModal" tabindex="-1" aria-labelledby="submitModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="submitModalLabel">Information</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Bilen är tillagd!
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="submitModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="submitModalLabel">Information</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Bilen är borttagen!
+              </div>
+            </div>
+          </div>
+        </div>
         <button type="reset" class="btn btn-primary" name="clearCarForm">Rensa</button>
       </form>
     </div>
     <section  id="cardContainer" class="container mt-12" >
     </section>
   </main>
-
   <script src="script.js"></script>
-
 </body>
-
 </html>

@@ -8,7 +8,7 @@ function fetchData() {
         .then((result) => result.json())
         .then((cars) => {
             if (cars.length > 0) {
-                let html = `<div class="grid row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-2 g-lg-3">`;
+                let html = `<div class="grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 g-2 g-lg-3">`;
                 cars.forEach((car) => {
                     html += `
                     <div class="card shadow-sm p-3 rounded-4 border"
@@ -24,9 +24,9 @@ function fetchData() {
                     </div>
                     <div class="text-center">
                         <button class="btn btn-primary"
-                            style="color: black; background-color: rgba(255, 255, 255, 0.8); border:none;" onclick="setCurrentCar(${car.id})">Ändra</button>
+                            style="color: black; background-color: rgba(255, 255, 255, 0.8); border:none;" data-bs-toggle="modal" data-bs-target="#submitModal" onclick="setCurrentCar(${car.id})">Ändra</button>
                         <button class="btn btn-primary"
-                            style="color: black; background-color: rgba(255, 255, 255, 0.8); border:none;" onclick="deleteCar(${car.id})">Ta bort</button>
+                            style="color: black; background-color: rgba(255, 255, 255, 0.8); border:none;" data-bs-toggle="modal" data-bs-target="#deleteModal" onclick="deleteCar(${car.id})">Ta bort</button>
                     </div>
                     </div>`;
                 });
@@ -38,6 +38,14 @@ function fetchData() {
             }
         });
 }
+
+var myModal = document.getElementById('modal');
+var myInput = document.getElementById('input');
+
+myModal.addEventListener('shown.bs.modal', function () {
+    myInput.focus();
+});
+
 
 
 function setCurrentCar(id) {
