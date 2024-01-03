@@ -101,6 +101,4 @@ function handleSubmit(e) {
         carForm.reset();
     });
 }
-
-
-
+ 
