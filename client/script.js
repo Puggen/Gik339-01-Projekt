@@ -24,9 +24,9 @@ function fetchData() {
                     </div>
                     <div class="text-center">
                         <button class="btn btn-primary"
-                            style="color: black; background-color: rgba(255, 255, 255, 0.8); border:none;" data-bs-toggle="modal" data-bs-target="#submitModal" onclick="setCurrentCar(${car.id})">Ändra</button>
+                            style="color: black; background-color: rgba(255, 255, 255, 0.8); border:none;" onclick="setCurrentCar(${car.id})">Ändra</button>
                         <button class="btn btn-primary"
-                            style="color: black; background-color: rgba(255, 255, 255, 0.8); border:none;" data-bs-toggle="modal" data-bs-target="#deleteModal" onclick="deleteCar(${car.id})">Ta bort</button>
+                            style="color: black; background-color: rgba(255, 255, 255, 0.8); border:none;" onclick="deleteCar(${car.id})">Ta bort</button>
                     </div>
                     </div>`;
                 });
@@ -38,13 +38,6 @@ function fetchData() {
             }
         });
 }
-
-var myModal = document.getElementById('modal');
-var myInput = document.getElementById('input');
-
-myModal.addEventListener('shown.bs.modal', function () {
-    myInput.focus();
-});
 
 
 
@@ -107,6 +100,9 @@ function handleSubmit(e) {
 
         localStorage.removeItem("currentId");
         carForm.reset();
+
+        const addCarModal = new bootstrap.Modal(document.getElementById('addCarModal'));
+            addCarModal.show();
     });
 }
  
