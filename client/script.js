@@ -7,29 +7,31 @@ function fetchData() {
         .then((result) => result.json())
         .then((cars) => {
             if (cars.length > 0) {
-                let html = `<ul class="w-3/4 my-3 mx-auto flex flex-wrap gap-2 justify-center">`;
+                let html = `<div class="grid row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-2 g-lg-3">`;
                 cars.forEach((car) => {
                     html += `
-                <li
-                    class="bg-${car.color}-200 basis-1/4 text-${car.color}-900 p-2 rounded-md border-2 border-${car.color}-400 flex flex-col justify-between">
-                    <h3>${car.model} ${car.manufac}</h3>
-                    <p>Bilens regnr: ${car.regnr}</p>
-                    <div>
-                        <button
-                            class="border border-${car.color}-300 hover:bg-white/100 rounded-md bg-white/50 p-1 text-sm mt-2" onclick="setCurrentcar(${car.id})">
-                            Ändra
-                        </button>
-                        <button class="border border-${car.color}-300 hover:bg-white/100 rounded-md bg-white/50 p-1 text-sm mt-2" onclick="deletecar(${car.id})">
-                            Ta bort
-                        </button>
+                    <div class="card shadow-sm p-3 rounded-4 border"
+                    style="background-color: ${car.color};">
+                    <img src="./img/OIG.png" class="card-img-top" alt="Logo of a car">
+                    <div class="card-body">
+                        <section class="border p-3 rounded-4" style="background-color: rgba(255, 255, 255, 0.8);">
+                            <h5 class="card-title text-center">${car.manufac}</h5>
+                            <p class="card-text">Regnr: ${car.regnr}</p>
+                            <p class="card-text">Modell: ${car.model}</p>                 
+                        </section>
                     </div>
-                </li>`;
+                    <div class="text-center">
+                        <button class="btn btn-primary"
+                            style="color: black; background-color: rgba(255, 255, 255, 0.8); border:none;">Ändra</button>
+                        <button class="btn btn-primary"
+                            style="color: black; background-color: rgba(255, 255, 255, 0.8); border:none;">Ta bort</button>
+                    </div>`;
                 });
-                html += `</ul>`;
+                html += `</div>`;
 
-                const ardContainer = document.getElementById("ardContainer");
-                ardContainer.innerHTML = "";
-                ardContainer.insertAdjacentHTML("beforeend", html);
+                const container = document.getElementById("container");
+                container.innerHTML += ``;
+                container.insertAdjacentHTML("beforeend", html);
             }
         });
 }
