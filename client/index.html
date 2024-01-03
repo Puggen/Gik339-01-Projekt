@@ -35,18 +35,23 @@
         </div>
         <div class="mb-3">
           <label for="regnr" class="form-label">Reg.Nr</label>
-          <input type="text" class="form-control" id="re"nr aria-describedby="regnr">
+          <input type="text" class="form-control" id="regnr"nr aria-describedby="regnr">
           <div id="regnr" class="form-text">Exempelvis HGT 323</div>
+        </div>
+        <div class="mb-3">
+          <label for="fuel" class="form-label">Drivmedel</label>
+          <input type="text" class="form-control" id="fuel"nr aria-describedby="fuel">
+          <div id="fuel" class="form-text">Exempelvis bensin</div>
         </div>
         <div class="mb-3">
           <label for="color" class="form-label">Färg</label>
           <select id="col" class="form-select">
             <option value="0, 128, 128,">Teal</option>
-            <option value="purple">Lila</option>
-            <option value="green">Grön</option>
-            <option value="gray">Grå</option>
-            <option value="red">Röd</option>
-            <option value="yellow">Gul</option>
+            <option value="170, 0, 255,">Lila</option>
+            <option value="0, 255, 0,">Grön</option>
+            <option value="128, 128, 128,">Grå</option>
+            <option value="255, 0, 0,">Röd</option>
+            <option value="200, 255, 0,">Gul</option>
           </select>
         </div>
         <button type="submit" class="btn btn-primary" name="submitCarForm">Lägg till</button>
@@ -56,7 +61,7 @@
     <section  id="cardContainer" class="container mt-12" >
       <div id="cardContainer" class="grid row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-2 g-lg-3">
         <div class="card shadow-sm p-3 rounded-4 border"
-            style="background-color:rgba(170, 0, 255, 0.6);">
+            style="background-color:rgba(255, 0, 0, 0.6);">
             <img src="./img/OIG.png" class="card-img-top" alt="Logo of a car">
             <div class="card-body">
                 <section class="border p-3 rounded-4" style="background-color: rgba(255, 255, 255, 0.8);">
