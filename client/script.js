@@ -11,7 +11,7 @@ function fetchData() {
                 cars.forEach((car) => {
                     html += `
                     <div class="card shadow-sm p-3 rounded-4 border"
-                    style="background-color: ${car.color};">
+                    style="background: linear-gradient(to top, ${car.color} 60%, rgba(255, 255, 255, 1) 100%);">
                     <img src="./img/OIG.png" class="card-img-top" alt="Logo of a car">
                     <div class="card-body">
                         <section class="border p-3 rounded-4" style="background-color: rgba(255, 255, 255, 0.8);">
@@ -26,6 +26,7 @@ function fetchData() {
                             style="color: black; background-color: rgba(255, 255, 255, 0.8); border:none;">Ändra</button>
                         <button class="btn btn-primary"
                             style="color: black; background-color: rgba(255, 255, 255, 0.8); border:none;">Ta bort</button>
+                    </div>
                     </div>`;
                 });
                 html += `</div>`;
@@ -36,6 +37,7 @@ function fetchData() {
             }
         });
 }
+
 
 function setCurrentcar(id) {
     console.log("current", id);
