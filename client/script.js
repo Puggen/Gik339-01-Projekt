@@ -101,8 +101,6 @@ function handleSubmit(e) {
         localStorage.removeItem("currentId");
         carForm.reset();
 
-        const addCarModal = new bootstrap.Modal(document.getElementById('addCarModal'));
-            addCarModal.show();
     });
 }
  
