@@ -1,4 +1,5 @@
 const url = "http://localhost:3000/cars";
+const carForm = document.getElementById("input");
 
 window.addEventListener("load", fetchData);
 
@@ -23,9 +24,9 @@ function fetchData() {
                     </div>
                     <div class="text-center">
                         <button class="btn btn-primary"
-                            style="color: black; background-color: rgba(255, 255, 255, 0.8); border:none;">Ändra</button>
+                            style="color: black; background-color: rgba(255, 255, 255, 0.8); border:none;" onclick="setCurrentCar(${car.id})">Ändra</button>
                         <button class="btn btn-primary"
-                            style="color: black; background-color: rgba(255, 255, 255, 0.8); border:none;">Ta bort</button>
+                            style="color: black; background-color: rgba(255, 255, 255, 0.8); border:none;" onclick="deleteCar(${car.id})">Ta bort</button>
                     </div>
                     </div>`;
                 });
@@ -39,7 +40,7 @@ function fetchData() {
 }
 
 
-function setCurrentcar(id) {
+function setCurrentCar(id) {
     console.log("current", id);
 
     fetch(`${url}/${id}`)
@@ -56,7 +57,7 @@ function setCurrentcar(id) {
         });
 }
 
-function deletecar(id) {
+function deleteCar(id) {
     console.log("delete", id);
     fetch(`${url}/${id}`, { method: "DELETE" }).then(() => fetchData());
 }
@@ -76,7 +77,8 @@ function handleSubmit(e) {
     servercarObject.manufac = carForm.manufac.value;
     servercarObject.regnr = carForm.regnr.value;
     servercarObject.color = carForm.color.value;
-    servercarObject.color = carForm.fuel.value;
+    servercarObject.fuel = carForm.fuel.value;
+    
 
     const id = localStorage.getItem("currentId");
     if (id) {
