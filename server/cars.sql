@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS  cars(
 );
   
 
-INSERT INTO cars(id,model,manufac,regnr,color,fuel) VALUES (1,'740','Volvo','HGT 435','darkred','Bensin');
+INSERT INTO cars(id,model,manufac,regnr,color,fuel) VALUES (1,'740','Volvo','HGT 435','red','Bensin');
 INSERT INTO cars(id,model,manufac,regnr,color,fuel) VALUES (2,'R8','Audi','MIT 782','gray','Bensin');
 INSERT INTO cars(id,model,manufac,regnr,color,fuel) VALUES (3,'520d','BMW','LKI 099','navy','Diesel');
 INSERT INTO cars(id,model,manufac,regnr,color,fuel) VALUES (4,'9000','SAAB','LKO 081','green','Bensin');
