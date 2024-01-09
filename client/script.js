@@ -61,7 +61,7 @@ function setCurrentCar(id) {
 function deleteCar(id) {
     console.log("delete", id);
     alert('Bilen är borttagen');
-    fetch(`${url}/${id}`, { method: "DELETE" }).then((response) => response.json()).then(json => {
+    fetch(`${url}/${id}`, { method: "DELETE" }).then((response) => response.json()).then(() => {
         
         
         localStorage.removeItem("currentId");
@@ -104,8 +104,7 @@ function handleSubmit(e) {
 
     fetch(request)
         .then((response) => response.json())
-        .then(json => {
-            
+        .then(() => {
 
             localStorage.removeItem("currentId");
             carForm.reset();
