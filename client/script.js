@@ -1,6 +1,6 @@
 const url = "http://localhost:3000/cars";
 const carForm = document.getElementById("input");
-
+ 
 window.addEventListener("load", fetchData);
 
 function fetchData() {
@@ -60,10 +60,10 @@ function setCurrentCar(id) {
 
 function deleteCar(id) {
     console.log("delete", id);
+    alert('Bilen är borttagen');
     fetch(`${url}/${id}`, { method: "DELETE" }).then((response) => response.json()).then(json => {
-        alert(json);
-        fetchData();
-
+        
+        
         localStorage.removeItem("currentId");
         carForm.reset();
     });
@@ -100,12 +100,12 @@ function handleSubmit(e) {
         },
         body: JSON.stringify(servercarObject),
     });
+    alert('Bilen sparades')
 
     fetch(request)
         .then((response) => response.json())
         .then(json => {
-            alert(json);
-            fetchData();
+            
 
             localStorage.removeItem("currentId");
             carForm.reset();
