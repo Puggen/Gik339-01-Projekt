@@ -94,13 +94,17 @@ function handleSubmit(e) {
         body: JSON.stringify(servercarObject),
     });
 
-    fetch(request).then((response) => response.json()).then(json => {
-        alert(response);
-        fetchData();
+    fetch(request)
+        .then((response) => response.json())
+        .then(json => {
+            alert("Important: " + json);
+            fetchData();
 
-        localStorage.removeItem("currentId");
-        carForm.reset();
-
-    });
+            localStorage.removeItem("currentId");
+            carForm.reset();
+        })
+        .catch(error =>{
+            console.error('Här va det fel', error);
+        });
 }
  

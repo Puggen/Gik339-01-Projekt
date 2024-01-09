@@ -66,10 +66,11 @@ server.post('/cars', (req, res) => {
 
   db.run(sql, Object.values(car), (err) => {
     if (err) {
-      console.log(err);
-      res.status(500).send(err);
+      console.error("Error",err);
+      res.status(500).json({error:err.message});
     } else {
-      res.send('Bilen sparades');
+      console.log('Bilen sparades')
+      res.status(200).json({message:'Bilen sparades'});
     }
   });
 });
