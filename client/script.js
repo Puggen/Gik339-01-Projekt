@@ -60,7 +60,13 @@ function setCurrentCar(id) {
 
 function deleteCar(id) {
     console.log("delete", id);
-    fetch(`${url}/${id}`, { method: "DELETE" }).then(() => fetchData());
+    fetch(`${url}/${id}`, { method: "DELETE" }).then((response) => response.json()).then(json => {
+        alert(json);
+        fetchData();
+
+        localStorage.removeItem("currentId");
+        carForm.reset();
+    });
     
 }
 
