@@ -61,6 +61,7 @@ function setCurrentCar(id) {
 function deleteCar(id) {
     console.log("delete", id);
     fetch(`${url}/${id}`, { method: "DELETE" }).then(() => fetchData());
+    
 }
 
 carForm.addEventListener("submit", handleSubmit); // Fix the event listener for the submit event
@@ -97,14 +98,11 @@ function handleSubmit(e) {
     fetch(request)
         .then((response) => response.json())
         .then(json => {
-            alert("Important: " + json);
+            alert(json);
             fetchData();
 
             localStorage.removeItem("currentId");
             carForm.reset();
-        })
-        .catch(error =>{
-            console.error('Här va det fel', error);
         });
 }
  
