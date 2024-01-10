@@ -70,7 +70,7 @@ function deleteCar(id) {
     
 }
 
-carForm.addEventListener("submit", handleSubmit); // Fix the event listener for the submit event
+carForm.addEventListener("submit", handleSubmit);
 
 function handleSubmit(e) {
     e.preventDefault();
