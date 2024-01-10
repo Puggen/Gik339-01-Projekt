@@ -104,7 +104,6 @@ server.delete('/cars/:id', (req, res) => {
       console.error("Error",err);
       res.status(500).json(err);
     } else {
-      console.log('Bilen är borta')
       res.status(200).json('Bilen är borttagen');
     }
   });
