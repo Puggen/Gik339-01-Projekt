@@ -30,7 +30,6 @@ server.get('/cars', (req, res) => {
     if (err) {
       res.status(500).send(err);
     } else {
-
       res.send(rows);
     }
   });
@@ -92,7 +91,6 @@ server.put('/cars', (req, res) => {
       res.status(200).json('Bilen uppdaterades');
     }
   });
-  //UPDATE cars SET model="Mikaela",manufac="Hedberg" WHERE id=1
 });
 
 server.delete('/cars/:id', (req, res) => {
