@@ -61,6 +61,7 @@ function setCurrentCar(id) {
 function deleteCar(id) {
     console.log("delete", id);
     alert('Bilen är borttagen');
+    window.location.reload()
     fetch(`${url}/${id}`, { method: "DELETE" }).then((response) => response.json()).then(() => {
         
         
@@ -101,6 +102,7 @@ function handleSubmit(e) {
         body: JSON.stringify(servercarObject),
     });
     alert('Bilen sparades')
+    window.location.reload()
 
     fetch(request)
         .then((response) => response.json())
