@@ -1,5 +1,6 @@
 const url = "http://localhost:3000/cars";
 const carForm = document.getElementById("input");
+const cardContainer = document.getElementById("cardContainer");
  
 window.addEventListener("load", fetchData);
 
@@ -7,6 +8,9 @@ function fetchData() {
     fetch(url)
         .then((result) => result.json())
         .then((cars) => {
+
+            
+            
             if (cars.length > 0) {
                 let html = `<div class="grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 g-2 g-lg-3">`;
                 cars.forEach((car) => {
@@ -31,9 +35,7 @@ function fetchData() {
                     </div>`;
                 });
                 html += `</div>`;
-
-                const cardContainer = document.getElementById("cardContainer");
-                cardContainer.innerHTML += '';
+                cardContainer.innerHTML = '';
                 cardContainer.insertAdjacentHTML("beforeend", html);
             }
         });
@@ -60,13 +62,14 @@ function setCurrentCar(id) {
 
 function deleteCar(id) {
     console.log("delete", id);
-    alert('Bilen är borttagen');
-    window.location.reload()
+    
     fetch(`${url}/${id}`, { method: "DELETE" }).then((response) => response.json()).then(() => {
         
         
         localStorage.removeItem("currentId");
         carForm.reset();
+        fetchData();
+        alert('Bilen är borttagen');
     });
     
 }
@@ -101,15 +104,14 @@ function handleSubmit(e) {
         },
         body: JSON.stringify(servercarObject),
     });
-    alert('Bilen sparades')
-    window.location.reload()
-
     fetch(request)
         .then((response) => response.json())
         .then(() => {
 
             localStorage.removeItem("currentId");
             carForm.reset();
+            fetchData();
+            alert('Bilen sparades')
         });
 }
  
